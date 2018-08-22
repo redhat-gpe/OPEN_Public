@@ -1,0 +1,37 @@
+= How To Build The Ravello IPMI Appliance
+
+These scripts can be deployed on a RHEL 7 system to provide a fake IPMI appliance that relays IPMI calls
+from within the Ravello application to the Ravello API to control power in the app.
+
+To create an appliance do the following:
+
+. Deploy a base RHEL 7 host with the *base RHEL 7 repo*
+. Add the RHEL `RHSCL` and `rh-common` repos
+. Install `cloud-init`, `ipmitool`, `ruby200-runtime`, `ruby200-rubygem-json`, and `ruby200-rubygems`
+. Install the *Ravello Python SDK* from https://github.com/ravello/python-sdk
+. Install `pyghmi` from https://github.com/openstack/pyghmi
+. Put `ravellobmc.py`, `ravellobmc-wrap.py`, `ravellobmc-wrap.bash` in `/usr/local/bin` and make sure they are executable
+. Put `ravellobmc.service` in `/etc/systemd/system`
+. *Enable* the `ravellobmc` service
+. Create a directory at `/etc/ravellobmc`
+. The VM name and hostname in Ravello _must_ be `ipmi-host`
+
+To configure a Ravello VM to use IPMI, add this in the General -> Description field in the VM configuration in Ravello:
+
+----
+ipmiaddr:192.0.2.221
+ipmipw:redhat
+----
+
+Where `ipmiaddr` will be a VIF that will be defined on the IPMI appliance.
+
+[IMPORTANT]
+This IP must be applicable as a VIF on the *eth0* interface.
+
+[NOTE]
+You can change the interface to be used in `ravellobmc-wrap.rb`.
+
+The `ipmipw` setting is the password that the listener will accept from inbound IPMI requests.
+
+The deployment workflow in CloudForms does the rest by injecting a cloud-init script into the VM that configures `/etc/ravellobmc/ravellobmc.conf` with an ephemeral token.
+It also configures all the VIFs and ipmitool listeners.
