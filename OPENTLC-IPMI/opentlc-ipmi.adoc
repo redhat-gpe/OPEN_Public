@@ -20,6 +20,8 @@ service called `ravellobmc.service`.
 
 You must create an ephemeral token in Ravello that has Read, Update, and Execute permissions for the application.
 
+image::images/ephtok.png[Example Ephemeral Token]
+
 === Wrapper
 
 In `/usr/local/bin` there are two files called `ravellobmc-wrap.bash` and `ravellobmc-wrap.rb`.
