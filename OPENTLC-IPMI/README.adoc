@@ -1,0 +1,7 @@
+= OPENTLC IPMI Appliance
+
+This repo contains the scripts and code for the OPENTLC IPMI appliance.
+
+See https://github.com/redhat-gpe/OPEN_Public/blob/master/OPENTLC-IPMI/build-appliance.adoc for information on how to build the appliance.
+
+See https://github.com/redhat-gpe/OPEN_Public/blob/master/OPENTLC-IPMI/opentlc-ipmi.adoc for information on how to implement the appliance.
