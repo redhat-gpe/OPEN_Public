@@ -1,0 +1,78 @@
+---
+
+- hosts: all
+  ignore_errors: true
+  handlers:
+  - name: restart sshd
+    service: name=sshd state=restarted
+
+  - name: restart firewalld
+    service: name=firewalld state=restarted
+
+  tasks:
+  - copy: src='files/sshd_config' dest='/etc/ssh/sshd_config' owner=root group=root mode=0600
+    notify:
+    - restart sshd
+
+  - name: configure kvm nested virtualization
+    copy: src=files/kvm_intel.conf dest=/etc/modprobe.d/kvm_intel.conf
+
+  - name: disable rp-filter
+    copy: src=files/98-rp-filter.conf dest=/etc/sysctl.d/98-rp-filter.conf
+
+  - service: name=firewalld state=started enabled=yes
+
+  - name: add yum repos
+    yum: pkg={{ item }} state=installed
+    with_items:
+      - centos-release-qemu-ev
+      - centos-release-openstack-queens
+      - epel-release
+
+  - name: install openvswitch
+    yum: pkg=openvswitch state=installed
+
+  - service: name=openvswitch state=started enabled=yes
+
+  - name: install virtualization packages
+    yum: pkg={{ item }} state=installed
+    with_items:
+      - qemu-kvm-ev
+      - qemu-kvm-tools-ev
+      - qemu-img-ev
+      - libvirt
+      - virt-install
+      - libguestfs-tools
+      - libguestfs-xfs
+      - python-lxml
+      - python-setuptools
+      - python2-virtualbmc
+
+  - service: name=libvirtd state=started enabled=yes
+
+  - name: install packages to access a remote console on a VM
+    yum: pkg={{ item }} state=installed
+    with_items:
+      - xorg-x11-apps
+      - xorg-x11-xauth
+      - xorg-x11-fonts-Type1
+      - virt-viewer
+
+  - name: install tools and utilities
+    yum: pkg={{ item }} state=installed
+    with_items:
+      - net-tools
+      - bind-utils
+      - tcpdump
+      - rsync
+      - git
+      - tmux
+      - screen
+      - jq
+
+  - name: copy a script to generate instackenv.json
+    copy: src=files/class/osp_advanced_director/gen_instackenv.sh dest=/root/gen_instackenv.sh mode=0755
+
+  - name: copy a script to setup the OSP13 environment
+    copy: src=files/class/osp_advanced_director/setup-env-osp13.sh dest=/root/setup-env-osp13.sh mode=0755
+
