@@ -1,18 +1,18 @@
 {
 	"catalog_items": [{
-		"catalog_item": "Ansible Security DEMO",
+		"catalog_item": "Ansible Security Automation",
 		"workload": "security_tower_workshop"
 	}, {
-		"catalog_item": "Ansible F5 Automation DEMO",
+		"catalog_item": "Ansible F5 Automation",
 		"workload": "f5_tower_workshop"
 	}, {
-		"catalog_item": "Ansible RHEL 90 Tower DEMO",
+		"catalog_item": "Ansible RHEL 90 Tower",
 		"workload": "rhel_90_tower_workshop"
 	}, {
-		"catalog_item": "Ansible Tower for Advanced Users DEMO",
+		"catalog_item": "Ansible Tower for Advanced Users",
 		"workload": "tower_advanced_users_workshop"
 	}, {
-		"catalog_item": "Ansible Windows DEMO",
+		"catalog_item": "Ansible Windows",
 		"workload": "windows_tower_workshop"
 	}]
 }
