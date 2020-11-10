@@ -7,18 +7,18 @@
 		"workload": "f5_tower_workshop"
 	}, {
 		"catalog_item": "Ansible RHEL",
-		"workload": "rhel_90_tower_workshop"
+		"workload": "rhel_tower_workshop"
 	}, {
-		"catalog_item": "Ansible Network Automation",
+		"catalog_item": "Ansible Network",
 		"workload": "networking_multivendor_tower_workshop"
 	}, {
 		"catalog_item": "Ansible Windows",
 		"workload": "windows_tower_workshop"
         }, {
 		"catalog_item": "Ansible Developer",
-		"workload": "rhel_90_tower_workshop"
+		"workload": "rhel_tower_workshop"
 	}, {
 		"catalog_item": "Ansible Compliance",
-		"workload": "rhel_90_tower_workshop"
+		"workload": "rhel_tower_workshop"
 	}]
 }
