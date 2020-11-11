@@ -1,9 +1,9 @@
 {
 	"catalog_items": [{
-		"catalog_item": "Ansible Security Automation",
+		"catalog_item": "Ansible Security",
 		"workload": "security_tower_workshop"
 	}, {
-		"catalog_item": "Ansible F5 Automation",
+		"catalog_item": "Ansible F5",
 		"workload": "f5_tower_workshop"
 	}, {
 		"catalog_item": "Ansible RHEL",
