@@ -1,0 +1,10 @@
+{
+	"catalog_items": [{
+		"catalog_item": "Security Demos",
+		"workloads": [
+      "tssc",
+      "devsecops",
+      "empty_cluster"
+    ]
+	}]
+}
