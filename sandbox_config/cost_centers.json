@@ -7,20 +7,20 @@
 	},
 	{
 		"code": "419",
-		"description": "Unknown",
-    "manager": "Unknown",
-		"geo": "Unknown"
+		"description": "CSO Solution Architect-Vert./Cloud",
+    "manager": "Chris Runge",
+		"geo": "NA"
 	},
  	{
  		"code": "422",
- 		"description": "Unknown",
- 		"manager": "Unknown",
- 		"geo": "Unknown"
+ 		"description": "CSO Solution Architect-SE/CSG",
+ 		"manager": "Chris Runge",
+ 		"geo": "NA"
  	},
  	{
  		"code": "465",
- 		"description": "Unknown",
- 		"manager": "Unknown",
- 		"geo": "Unknown"
+ 		"description": "CSO Global SA Leadership",
+ 		"manager": "Trey Seck",
+ 		"geo": "Global"
  	}
 ]
