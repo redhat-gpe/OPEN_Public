@@ -1,6 +1,25 @@
-  [
-    "441",
-    "419",
-    "422",
-    "465"
+  [{
+  		"code": "441",
+  		"description": "GPTE",
+  		"manager": "Trey Seck",
+  		"geo": "Global"
+  	},
+  	{
+  		"code": "419",
+  		"description": "Unknown",
+  		"manager": "Unknown",
+  		"geo": "Unknown"
+  	},
+  	{
+  		"code": "422",
+  		"description": "Unknown",
+  		"manager": "Unknown",
+  		"geo": "Unknown"
+  	},
+  	{
+  		"code": "465",
+  		"description": "Unknown",
+  		"manager": "Unknown",
+  		"geo": "Unknown"
+  	}
   ]
