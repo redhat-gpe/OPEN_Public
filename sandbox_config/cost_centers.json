@@ -4,23 +4,70 @@
 		"description": "GPTE",
 		"manager": "Trey Seck",
 		"geo": "Global"
-	},
-	{
+  },
+  {
 		"code": "419",
-		"description": "Unknown",
-    "manager": "Unknown",
-		"geo": "Unknown"
-	},
- 	{
+		"description": "CSO Solution Architect-Vert./Cloud",
+        	"manager": "Chris Runge",
+		"geo": "NA"
+  },
+  {
  		"code": "422",
- 		"description": "Unknown",
- 		"manager": "Unknown",
- 		"geo": "Unknown"
- 	},
- 	{
+ 		"description": "CSO Solution Architect-SE/CSG",
+ 		"manager": "Chris Runge",
+ 		"geo": "NA"
+  },
+  {
  		"code": "465",
- 		"description": "Unknown",
- 		"manager": "Unknown",
- 		"geo": "Unknown"
- 	}
+ 		"description": "CSO Global SA Leadership",
+ 		"manager": "Trey Seck",
+ 		"geo": "Global"
+  },
+  {
+ 		"code": "417",
+ 		"description": "Kevin Barfield",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"
+  },
+  {
+ 		"code": "414",
+ 		"description": "Eugene Tay",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"
+  },
+  {
+ 		"code": "420",
+ 		"description": "Paul Pickney",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"
+  },
+  {		"code": "425",
+ 		"description": "Curtis Zinzilieta",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"   
+  },
+  {
+  		"code": "425",
+ 		"description": "Sean Spurrier",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"   
+  },
+  {
+        	"code": "413",
+ 		"description": "Gary Zaelit",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"  
+  },
+  {
+  	        "code": "421",
+ 		"description": "E.G. Nadhan",
+        	"manager": "Chris Runge",
+ 		"geo": "NA"  
+  },
+  {
+  	      	"code": "393",
+        	"description": "CSO Inside-Channel",
+        	"manager": "Chris Runge",
+        	"geo": "NA"   
+  }
 ]
